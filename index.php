@@ -136,6 +136,25 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Cadastrar Produto</button>
+                        <hr>
+        <h3>Produtos Cadastrados</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($products as $product): ?>
+                    <tr>
+                        <td><?= $product['id'] ?></td>
+                        <td><?= $product['name'] ?></td>
+                        <td><?= $product['category_name'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
                     </form>
                 </div>
 
@@ -158,7 +177,7 @@
             </main>
         </div>
     </div>
-
+        
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -196,4 +215,5 @@
     </script>
 </body>
 
+</div>
 </html>
